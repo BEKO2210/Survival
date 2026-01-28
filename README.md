@@ -8,7 +8,7 @@
 
 Ein umfassendes, deutschsprachiges Handbuch für Krisenvorsorge und Notfallplanung. Von den ersten kritischen 72 Stunden bis zum langfristigen Überleben - strukturiert nach der bewährten **Survival-Dreier-Regel**.
 
-**[🔗 Live Demo ansehen](https://yourusername.github.io/survival-guide/)**
+**[🔗 Live Demo ansehen](https://beko2210.github.io/Survival/)**
 
 ![Screenshot](assets/screenshot.png)
 
