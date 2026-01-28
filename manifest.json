@@ -1,0 +1,34 @@
+{
+  "name": "ÜBERLEBEN - Krisenvorsorge Handbuch",
+  "short_name": "Überleben",
+  "description": "Handbuch für den gesellschaftlichen Zusammenbruch - Systematische Krisenvorsorge nach der Survival-Dreier-Regel",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f0f",
+  "theme_color": "#ff6b35",
+  "orientation": "portrait-primary",
+  "lang": "de",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "assets/screenshot.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "Hauptseite des Survival-Handbuchs"
+    }
+  ]
+}

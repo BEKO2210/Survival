@@ -1,0 +1,10 @@
+# Robots.txt für ÜBERLEBEN - Survival Guide
+
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://yourusername.github.io/survival-guide/sitemap.xml
+
+# Crawl-delay (optional, für respektvolles Crawling)
+Crawl-delay: 1

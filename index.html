@@ -1,0 +1,2317 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ÜBERLEBEN - Das umfassende Handbuch für Krisenvorsorge und gesellschaftlichen Zusammenbruch. Systematische Anleitung nach der Survival-Dreier-Regel.">
+    <meta name="keywords" content="Survival, Krisenvorsorge, Prepping, Notfallvorsorge, Überleben, Bug-Out-Bag, Wasseraufbereitung, Erste Hilfe">
+    <meta name="author" content="Survival Press">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ÜBERLEBEN - Handbuch für den gesellschaftlichen Zusammenbruch">
+    <meta property="og:description" content="Systematische Krisenvorsorge nach der Survival-Dreier-Regel. Von den ersten 72 Stunden bis zum langfristigen Überleben.">
+    <meta property="og:image" content="assets/og-image.png">
+    <meta property="og:url" content="https://yourusername.github.io/survival-guide/">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ÜBERLEBEN - Krisenvorsorge Handbuch">
+    <meta name="twitter:description" content="Systematische Krisenvorsorge nach der Survival-Dreier-Regel.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourusername.github.io/survival-guide/">
+    
+    <title>ÜBERLEBEN - Handbuch für den gesellschaftlichen Zusammenbruch</title>
+    
+    <style>
+        :root {
+            --bg-primary: #0f0f0f;
+            --bg-secondary: #1a1a1a;
+            --bg-tertiary: #252525;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent-orange: #ff6b35;
+            --accent-orange-light: #ff8c5a;
+            --accent-green: #4a9;
+            --accent-red: #d32f2f;
+            --accent-yellow: #f9a825;
+            --border: #333;
+            --font-mono: 'Courier New', 'Consolas', monospace;
+            --font-serif: 'Georgia', 'Times New Roman', serif;
+            --font-sans: 'Segoe UI', 'Helvetica Neue', 'Helvetica', sans-serif;
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.3);
+            --shadow-lg: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        /* Accessibility: Focus States */
+        :focus-visible {
+            outline: 2px solid var(--accent-orange);
+            outline-offset: 2px;
+        }
+
+        /* Skip Link for Accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent-orange);
+            color: #000;
+            padding: 8px 16px;
+            z-index: 100;
+            transition: top var(--transition-fast);
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(to bottom, #000, #0f0f0f);
+            border-bottom: 2px solid var(--accent-orange);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-orange);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            text-decoration: none;
+        }
+
+        .subtitle {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            display: block;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color var(--transition-normal);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--accent-orange);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-orange);
+            transition: width var(--transition-normal);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: 2px solid var(--accent-orange);
+            color: var(--accent-orange);
+            padding: 0.5rem 0.75rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            border-radius: 4px;
+            transition: all var(--transition-fast);
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--accent-orange);
+            color: #000;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 900px;
+            margin: 100px auto 0;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            background: var(--bg-secondary);
+            padding: 2.5rem;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-md);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent-orange);
+            text-align: center;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-bottom: 3px solid var(--accent-orange);
+            padding-bottom: 1rem;
+        }
+
+        .book-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 3rem 0;
+            background: linear-gradient(to bottom, var(--bg-secondary), transparent);
+        }
+
+        .book-title h1 {
+            border-bottom: none;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .author {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--accent-green);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin-top: 3rem;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--accent-orange);
+            margin-top: 2.5rem;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        /* Special Boxes */
+        .priority-box {
+            background: linear-gradient(135deg, #2a1f1f 0%, #1f1f1f 100%);
+            border-left: 4px solid var(--accent-red);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .priority-box h4 {
+            color: var(--accent-red);
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .warning-box {
+            background: rgba(249, 168, 37, 0.1);
+            border-left: 4px solid var(--accent-yellow);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .warning-box::before {
+            content: "⚠ ACHTUNG: ";
+            font-weight: bold;
+            color: var(--accent-yellow);
+        }
+
+        .tip-box {
+            background: rgba(74, 170, 153, 0.1);
+            border-left: 4px solid var(--accent-green);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .tip-box::before {
+            content: "✓ PROFI-TIPP: ";
+            font-weight: bold;
+            color: var(--accent-green);
+        }
+
+        .info-box {
+            background: rgba(100, 149, 237, 0.1);
+            border-left: 4px solid #6495ed;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .info-box::before {
+            content: "ℹ INFO: ";
+            font-weight: bold;
+            color: #6495ed;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+        }
+
+        ul li {
+            list-style-type: square;
+        }
+
+        ul li::marker {
+            color: var(--accent-orange);
+        }
+
+        ol li::marker {
+            color: var(--accent-orange);
+            font-weight: bold;
+        }
+
+        /* Nested Lists */
+        ul ul, ol ul {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Tables */
+        .table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        th {
+            background: var(--accent-orange);
+            color: #000;
+            font-weight: bold;
+            text-align: left;
+            padding: 1rem;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        tr:hover td {
+            background: rgba(255,255,255,0.05);
+            color: var(--text-primary);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Code and Checklists */
+        .checklist {
+            background: var(--bg-tertiary);
+            padding: 1.5rem;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            margin: 1.5rem 0;
+            font-family: var(--font-mono);
+        }
+
+        .checklist-title {
+            color: var(--accent-orange);
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: start;
+            margin-bottom: 0.8rem;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: background var(--transition-fast);
+        }
+
+        .checklist-item:hover {
+            background: rgba(255,255,255,0.03);
+        }
+
+        .checklist-item input[type="checkbox"] {
+            margin-right: 1rem;
+            margin-top: 0.3rem;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            accent-color: var(--accent-orange);
+            flex-shrink: 0;
+        }
+
+        .checklist-item label {
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .checklist-item input:checked + label {
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+
+        code {
+            background: var(--bg-tertiary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: var(--font-mono);
+            color: var(--accent-green);
+            border: 1px solid var(--border);
+            font-size: 0.9em;
+        }
+
+        pre {
+            background: var(--bg-tertiary);
+            padding: 1.5rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            margin: 1.5rem 0;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Blockquotes */
+        blockquote {
+            border-left: 4px solid var(--accent-orange);
+            padding-left: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            background: rgba(255,107,53,0.05);
+            padding: 1.5rem 1.5rem 1.5rem 2rem;
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* Links */
+        a {
+            color: var(--accent-orange);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: var(--accent-orange-light);
+        }
+
+        /* TOC */
+        .toc {
+            background: var(--bg-tertiary);
+            padding: 2rem;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            margin: 3rem 0;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            color: var(--accent-orange);
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            display: block;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            transition: all var(--transition-fast);
+        }
+
+        .toc a:hover {
+            padding-left: 15px;
+            background: rgba(255,255,255,0.05);
+            text-decoration: none;
+        }
+
+        .toc .level-1 {
+            font-weight: bold;
+            color: var(--accent-green);
+            margin-top: 1rem;
+        }
+
+        .toc .level-1:first-child {
+            margin-top: 0;
+        }
+
+        .toc .level-2 {
+            padding-left: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* Phase Indicators */
+        .phase-indicator {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            margin-left: 0.5rem;
+        }
+
+        .phase-critical {
+            background: var(--accent-red);
+            color: #fff;
+        }
+
+        .phase-important {
+            background: var(--accent-yellow);
+            color: #000;
+        }
+
+        .phase-helpful {
+            background: var(--accent-green);
+            color: #000;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid var(--accent-orange);
+            margin: 2rem 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.35rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--accent-orange);
+            border-radius: 50%;
+            border: 2px solid var(--bg-primary);
+        }
+
+        .timeline-time {
+            color: var(--accent-orange);
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        /* Collapsible Sections */
+        details {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        summary {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--accent-orange);
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform var(--transition-fast);
+        }
+
+        details[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        details > div {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        /* Print Button */
+        .print-btn {
+            position: fixed;
+            bottom: 80px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 18px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+            transition: all var(--transition-fast);
+        }
+
+        .print-btn:hover {
+            background: var(--accent-green);
+            color: #000;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--bg-secondary);
+                flex-direction: column;
+                padding: 1rem;
+                border-bottom: 2px solid var(--accent-orange);
+                gap: 0;
+            }
+
+            nav a {
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid var(--border);
+            }
+
+            nav a:last-child {
+                border-bottom: none;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            main {
+                margin-top: 70px;
+                padding: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .book-title h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th, td {
+                padding: 0.6rem;
+            }
+
+            .toc {
+                padding: 1.5rem;
+            }
+
+            blockquote {
+                padding-left: 1.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                padding: 0.75rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .subtitle {
+                font-size: 0.6rem;
+            }
+
+            section {
+                padding: 1rem;
+            }
+
+            .checklist {
+                padding: 1rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            header {
+                position: static;
+                border-bottom: 2px solid #000;
+            }
+            
+            .mobile-menu-btn,
+            #topBtn,
+            .print-btn,
+            .progress-container {
+                display: none !important;
+            }
+            
+            main {
+                margin-top: 0;
+                max-width: none;
+            }
+            
+            .toc {
+                position: static;
+            }
+            
+            body {
+                background: white;
+                color: black;
+                font-size: 12pt;
+            }
+            
+            section {
+                break-inside: avoid;
+                background: white;
+                border: 1px solid #ccc;
+                box-shadow: none;
+                page-break-inside: avoid;
+            }
+
+            a {
+                color: #000;
+                text-decoration: underline;
+            }
+
+            .warning-box,
+            .tip-box,
+            .priority-box,
+            .info-box {
+                border-left-width: 3px;
+                background: #f5f5f5;
+            }
+
+            h1, h2, h3, h4 {
+                color: #000;
+                page-break-after: avoid;
+            }
+
+            table {
+                page-break-inside: avoid;
+            }
+
+            .checklist-item input[type="checkbox"] {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            height: 4px;
+            background: var(--bg-tertiary);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1001;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-green));
+            width: 0%;
+            transition: width 0.1s;
+        }
+
+        /* Abbreviations */
+        abbr {
+            border-bottom: 1px dotted var(--accent-orange);
+            cursor: help;
+            text-decoration: none;
+        }
+
+        /* Strong and Emphasis */
+        strong {
+            color: var(--accent-orange);
+            font-weight: 600;
+        }
+
+        em {
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* Back to Top Button */
+        #topBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: var(--accent-orange);
+            color: black;
+            cursor: pointer;
+            padding: 15px 18px;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-fast);
+        }
+
+        #topBtn:hover {
+            background-color: var(--accent-orange-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Statistics Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-item {
+            background: var(--bg-tertiary);
+            padding: 1.5rem;
+            border-radius: 4px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-orange);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+            background: var(--bg-secondary);
+        }
+
+        footer a {
+            color: var(--accent-orange);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+        }
+
+        /* Loading Animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .loading.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--border);
+            border-top-color: var(--accent-orange);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+    <header role="banner">
+        <div class="header-content">
+            <a href="#" class="logo">
+                ÜBERLEBEN
+                <span class="subtitle">Handbuch für den gesellschaftlichen Zusammenbruch</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainNav">☰</button>
+            <nav id="mainNav" role="navigation" aria-label="Hauptnavigation">
+                <a href="#einleitung">Einleitung</a>
+                <a href="#akut">Phase I: 72h</a>
+                <a href="#etablierung">Phase II: 1-4 Wochen</a>
+                <a href="#langfristig">Phase III: Langfristig</a>
+                <a href="#skills">Kritische Skills</a>
+                <a href="#anhang">Anhang</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <div class="book-title">
+            <h1>Überleben</h1>
+            <div class="subtitle">Handbuch für den gesellschaftlichen Zusammenbruch</div>
+            <div class="author">Systematische Krisenvorsorge nach der Survival-Dreier-Regel</div>
+        </div>
+
+        <!-- Statistik-Übersicht -->
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">72h</span>
+                <span class="stat-label">Kritische Phase</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">3L</span>
+                <span class="stat-label">Wasser pro Tag</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">1200</span>
+                <span class="stat-label">Min. kcal/Tag</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">∞</span>
+                <span class="stat-label">Vorbereitung zahlt sich aus</span>
+            </div>
+        </div>
+
+        <section id="einleitung">
+            <h2>Das Prioritäten-Framework</h2>
+            
+            <p>Bevor wir beginnen: Die <strong>Survival-Dreier-Regel</strong> bestimmt jede Entscheidung in der Krise:</p>
+            
+            <ul>
+                <li><strong>3 Minuten</strong> ohne Luft (erstickungsrelevant)</li>
+                <li><strong>3 Stunden</strong> ohne Körpertemperaturregulation (Unterkühlung/Hitzschlag)</li>
+                <li><strong>3 Tage</strong> ohne Wasser</li>
+                <li><strong>3 Wochen</strong> ohne Nahrung</li>
+            </ul>
+
+            <div class="priority-box">
+                <h4>Konsequenz für alle Entscheidungen</h4>
+                <p><strong>Sicherheit → Schutz/Wärme → Wasser → Nahrung → Komfort</strong></p>
+                <p>Diese Reihenfolge gilt immer. Wer sie missachtet, gefährdet sein Leben.</p>
+            </div>
+
+            <blockquote>
+                "Wenn die Strukturen, die unser tägliches Leben tragen, zerfallen, offenbart sich eine Wahrheit, die wir in der Bequemlichkeit der Moderne vergessen haben: Der Mensch ist ein überlebensstarkes Wesen, vorausgesetzt, er verfügt über das nötige Wissen."
+            </blockquote>
+
+            <div class="warning-box">
+                Dieses Handbuch ist kein Manifest des Pessimismus, sondern eine Versicherungspolice aus Papier. Es richtet sich an jene, die Verantwortung für sich und ihre Liebsten übernehmen wollen, ohne in paranoiden Eskapismus abzugleiten.
+            </div>
+
+            <h3>Szenarien, für die dieses Handbuch vorbereitet</h3>
+            <ul>
+                <li><strong>Naturkatastrophen:</strong> Überschwemmungen, Erdbeben, Stürme, extreme Wetterereignisse</li>
+                <li><strong>Infrastrukturausfall:</strong> Langfristiger Stromausfall (Blackout), Zusammenbruch der Wasserversorgung</li>
+                <li><strong>Versorgungskrise:</strong> Lieferkettenunterbrechungen, Lebensmittelknappheit</li>
+                <li><strong>Wirtschaftskollaps:</strong> Hyperinflation, Bankensystem-Versagen</li>
+                <li><strong>Pandemie:</strong> Quarantäne-Situationen, eingeschränkte medizinische Versorgung</li>
+                <li><strong>Gesellschaftliche Unruhen:</strong> Bürgerkriegsähnliche Zustände, Zusammenbruch der öffentlichen Ordnung</li>
+            </ul>
+
+            <div class="info-box">
+                Die Wahrscheinlichkeit eines vollständigen gesellschaftlichen Zusammenbruchs ist gering. Jedoch zeigen Ereignisse wie der Blackout in Texas 2021, die Flutkatastrophe im Ahrtal 2021 oder die COVID-19-Pandemie, dass auch in modernen Gesellschaften Versorgungssysteme temporär versagen können. Dieses Handbuch bereitet auf genau solche Szenarien vor.
+            </div>
+        </section>
+
+        <div class="toc">
+            <h3>📋 Schnellnavigation</h3>
+            <ul>
+                <li class="level-1"><a href="#akut">TEIL I: Die ersten 72 Stunden</a></li>
+                <li class="level-2"><a href="#wasser-72h">1.1 Wassersicherung</a></li>
+                <li class="level-2"><a href="#rationierung">1.2 Nahrungsmittel-Rationierung</a></li>
+                <li class="level-2"><a href="#unterkunft">1.3 Unterkunftssicherung</a></li>
+                <li class="level-2"><a href="#kommunikation">1.4 Kommunikationsnetz</a></li>
+                <li class="level-2"><a href="#psychologie">1.5 Krisenpsychologie</a></li>
+                
+                <li class="level-1"><a href="#etablierung">TEIL II: Etablierung (Woche 1-4)</a></li>
+                <li class="level-2"><a href="#wasser-lang">2.1 Wasserversorgung</a></li>
+                <li class="level-2"><a href="#nahrung">2.2 Nahrungsbeschaffung</a></li>
+                <li class="level-2"><a href="#verteidigung">2.3 Verteidigung</a></li>
+                <li class="level-2"><a href="#medizin">2.4 Medizin ohne Arzt</a></li>
+                <li class="level-2"><a href="#hygiene">2.5 Krisenhygiene</a></li>
+                
+                <li class="level-1"><a href="#langfristig">TEIL III: Langfristiges Überleben</a></li>
+                <li class="level-2"><a href="#gemeinschaft">3.1 Gemeinschaftsbildung</a></li>
+                <li class="level-2"><a href="#energie">3.2 Energieautarkie</a></li>
+                <li class="level-2"><a href="#landwirtschaft">3.3 Subsistenzwirtschaft</a></li>
+                <li class="level-2"><a href="#konservierung">3.4 Konservierung</a></li>
+                <li class="level-2"><a href="#handwerk">3.5 Handwerksbasics</a></li>
+                
+                <li class="level-1"><a href="#skills">TEIL IV: Kritische Skills</a></li>
+                <li class="level-2"><a href="#feuer">4.1 Feuer machen</a></li>
+                <li class="level-2"><a href="#wasser-auf">4.2 Wasseraufbereitung</a></li>
+                <li class="level-2"><a href="#erste-hilfe">4.3 Notfallmedizin</a></li>
+                <li class="level-2"><a href="#navigation">4.4 Navigation</a></li>
+                <li class="level-2"><a href="#knoten">4.5 Knotenkunde</a></li>
+                
+                <li class="level-1"><a href="#anhang">Anhang & Checklisten</a></li>
+            </ul>
+        </div>
+
+        <!-- ===== TEIL I: ERSTE 72 STUNDEN ===== -->
+        <section id="akut">
+            <h2>TEIL I: ERSTE 72 STUNDEN - Die akute Phase <span class="phase-indicator phase-critical">Kritisch</span></h2>
+            <p>Die ersten drei Tage entscheiden nicht nur über Ihr Überleben, sondern über Ihre psychologische Resilienz für die kommenden Wochen und Monate. In dieser Phase ist strukturiertes Handeln wichtiger als perfekte Entscheidungen.</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-time">Stunde 0-6</span>
+                    <p>Lagebeurteilung, Wassersicherung, Perimeter-Check</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">Stunde 6-24</span>
+                    <p>Wasserfilter improvisieren, Vorräte inventarisieren, Kommunikation aufbauen</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">Tag 2-3</span>
+                    <p>Rationierung starten, Verteidigungsplan, Erkundung der Umgebung</p>
+                </div>
+            </div>
+
+            <h3 id="wasser-72h">1.1 Wassersicherung <span class="phase-indicator phase-critical">Lebenswichtig</span></h3>
+            
+            <h4>Sofortmaßnahmen (Stunde 0-6):</h4>
+            
+            <p><strong>Vorratsprüfung:</strong></p>
+            <ul>
+                <li>Trinkwasser im Haushalt: <strong>3 Liter pro Person/Tag</strong> für 72h = <strong>9 Liter Mindestreserve pro Person</strong></li>
+                <li>Wasserboiler, Spül- und Waschmaschineninhalte als Notreserve (nicht direkt trinkbar ohne Aufbereitung)</li>
+                <li>Eiswürfel im Gefrierfach (solange noch gefroren: trinkbar)</li>
+            </ul>
+
+            <p><strong>Alternative Quellen im Haushalt:</strong></p>
+            <ul>
+                <li>Wasserspeicher in Toilettenspülungen (nur aus dem Kasten, nicht aus der Schüssel; nur falls keine Reinigungschemie verwendet wurde)</li>
+                <li>Regenfässer, Gartenteiche (müssen aufbereitet werden)</li>
+                <li>Schwimmbadwasser (Chlorgehalt prüfen, ggf. verdünnen)</li>
+                <li>Nachbarangebote (solange noch Kommunikation möglich)</li>
+            </ul>
+
+            <div class="tip-box">
+                Bevor Sie Wasserhähne öffnen: Badewanne vollständig füllen! Bei Druckabfall in der Leitung ist dies Ihre letzte Chance auf größere Wassermengen.
+            </div>
+
+            <h4>DIY-Filter (Stunde 6-24):</h4>
+            <p><strong>Materialien:</strong> PET-Flasche (1,5-2L), Baumwollstoff (T-Shirt oder Socke), Holzkohle (Grillkohle, zerstoßen), Sand (gewaschen), Kies, Schere/Messer</p>
+
+            <h4>Schritt-für-Schritt Bauanleitung:</h4>
+            <ol>
+                <li>Flaschenboden mit Messer/Schere abschneiden</li>
+                <li>Deckel mit 5-10 kleinen Löchern versehen (Nagel oder Schraubenzieher)</li>
+                <li>Flasche kopfüber halten und von unten nach oben schichten:
+                    <ul>
+                        <li>Baumwollstoff (2-3 Lagen, direkt über den Löchern)</li>
+                        <li>Zerstoßene Holzkohle (ca. 5-7 cm)</li>
+                        <li>Feiner Sand (ca. 3-5 cm)</li>
+                        <li>Grober Sand (ca. 3 cm)</li>
+                        <li>Kies (ca. 3-5 cm)</li>
+                        <li>Oben: weitere Baumwolllage als Vorfilter</li>
+                    </ul>
+                </li>
+                <li>Wasser mehrmals durchlaufen lassen bis klarer</li>
+                <li><strong>KRITISCH:</strong> Nach dem Filtern immer <strong>mindestens 1 Minute kräftig kochen</strong> (3 Minuten bei Höhenlagen über 2000m)</li>
+            </ol>
+
+            <div class="warning-box">
+                <strong>Häufige tödliche Fehler:</strong><br>
+                ❌ Nur filtern, nicht kochen (Viren und Parasiten passieren den Filter)<br>
+                ❌ Holzkohle aus Anzündwürfeln oder behandelten Grillbriketts verwenden (giftige Chemikalien)<br>
+                ❌ Trübes Wasser direkt kochen ohne Vorfilterung (Verunreinigungen überleben, Wasser schmeckt schlecht)<br>
+                ❌ Salzwasser oder Urin filtern (Salz und Harnstoff passieren jeden primitiven Filter)
+            </div>
+
+            <div class="tip-box">
+                <strong>Merksatz:</strong> Filtern entfernt Dreck, Kochen tötet Keime. Beides ist notwendig, keines allein reicht aus.
+            </div>
+
+            <details>
+                <summary>Alternative Desinfektionsmethoden (wenn Kochen nicht möglich)</summary>
+                <div>
+                    <ul>
+                        <li><strong>SODIS-Methode:</strong> Klares Wasser in transparenter PET-Flasche 6+ Stunden in direkter Sonne (UV-Strahlung). Nur bei wolkenlosem Himmel effektiv.</li>
+                        <li><strong>Chemisch (Chlor):</strong> 2 Tropfen unparfümierte Haushaltsbleiche (5-6% Natriumhypochlorit) pro Liter, 30 Min. einwirken lassen.</li>
+                        <li><strong>Jod:</strong> 5 Tropfen 2%ige Jodtinktur pro Liter, 30 Min. warten. Nicht für Schwangere/Schilddrüsenkranke!</li>
+                    </ul>
+                </div>
+            </details>
+
+            <h3 id="rationierung">1.2 Nahrungsmittel-Rationierung <span class="phase-indicator phase-important">Wichtig</span></h3>
+            
+            <h4>Die 72-Stunden-Disziplin:</h4>
+            <ul>
+                <li><strong>Tag 1:</strong> Normale Portionsgrößen (Sie brauchen Energie für kritische Arbeit)</li>
+                <li><strong>Tag 2-3:</strong> 50% Reduktion (Körper gewöhnt sich an reduzierte Kalorienzufuhr)</li>
+            </ul>
+
+            <h4>Verderblichkeitshierarchie - Was zuerst essen:</h4>
+            <ol>
+                <li><strong>Sofort (Tag 1):</strong> Gekühlte Ware - Kühlschrank hält ohne Strom 4-6h, geschlossene Tiefkühltruhe 24-48h</li>
+                <li><strong>Tag 1-2:</strong> Frisches Obst und Gemüse</li>
+                <li><strong>Tag 2-3:</strong> Brot und Backwaren</li>
+                <li><strong>Reservieren für Woche 2+:</strong> Konserven, Trockenware, vakuumierte Produkte</li>
+            </ol>
+
+            <h4>Rationierungs-Schema nach Personengruppe:</h4>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Personengruppe</th>
+                            <th>Tagesration (kcal)</th>
+                            <th>Begründung</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Erwachsene (ruhend)</td>
+                            <td>1200-1500</td>
+                            <td>Grundumsatzdeckung</td>
+                        </tr>
+                        <tr>
+                            <td>Erwachsene (aktiv)</td>
+                            <td>1800-2000</td>
+                            <td>Muskelkatabolismus verhindern</td>
+                        </tr>
+                        <tr>
+                            <td>Kinder (unter 12)</td>
+                            <td>1000-1200</td>
+                            <td>Wachstumsbedarf, aber geringerer Grundumsatz</td>
+                        </tr>
+                        <tr>
+                            <td>Schwangere/Stillende</td>
+                            <td>1800-2200</td>
+                            <td>Fötus/Säugling priorisieren</td>
+                        </tr>
+                        <tr>
+                            <td>Ältere Menschen (65+)</td>
+                            <td>1200-1400</td>
+                            <td>Reduzierter Metabolismus, aber Proteinbedarf beachten</td>
+                        </tr>
+                        <tr>
+                            <td>Wachdienst/Schwerstarbeit</td>
+                            <td>2000-2500</td>
+                            <td>Leistungsfähigkeit erhalten</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="warning-box">
+                <strong>Häufige Fehler bei der Rationierung:</strong><br>
+                ❌ Panik-Essen am ersten Tag aus Stress<br>
+                ❌ Konserven planlos öffnen (nach dem Öffnen innerhalb von 24h verbrauchen)<br>
+                ❌ Verderbliches wegwerfen statt priorisieren<br>
+                ❌ Kinder/Kranke unterversorgen, um zu "sparen"
+            </div>
+
+            <h3 id="unterkunft">1.3 Unterkunftssicherung <span class="phase-indicator phase-critical">Lebenswichtig</span></h3>
+            
+            <h4>Perimeter-Check (erste 2 Stunden):</h4>
+            <ul>
+                <li>Türen und Schlösser funktionsfähig? Zusätzliche Riegel improvisieren</li>
+                <li>Fenster verdunkelbar (Licht bei Nacht zeigt Aktivität und Ressourcen an)</li>
+                <li>Dach und Struktur intakt? Bei Unwetter-/Erdbebenschäden sofort alternative Unterkunft suchen</li>
+                <li>Alternative Räumlichkeiten identifizieren:
+                    <ul>
+                        <li>Keller bei Gewalt/Beschuss von außen</li>
+                        <li>Obere Stockwerke/Dach bei Überschwemmung</li>
+                        <li>Innenliegender Raum ohne Fenster bei Sturm</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Verdunklung und Sichtschutz:</h4>
+            <ul>
+                <li><strong>Alufolie</strong> statt Gardinen (reflektiert Wärme, lichtundurchlässig)</li>
+                <li>Matratzen oder umgekehrte Betten gegen Fenster (Splitterschutz bei Einbruchsversuch)</li>
+                <li>Licht nur in fensterlosen Räumen nutzen (Badezimmer, Abstellkammer)</li>
+                <li>Kerzen/Taschenlampen: Nie am Fenster, immer abgeschirmt</li>
+            </ul>
+
+            <h4>Temperaturmanagement ohne Heizung:</h4>
+            <ul>
+                <li><strong>Einen Raum wählen</strong> und nur diesen warm halten (Körperwärme konzentrieren)</li>
+                <li>Tür- und Fensterzugluftstopper improvisieren (Handtücher, Decken)</li>
+                <li>Zelten im Haus: Zelt im Wohnzimmer aufschlagen, reduziert zu beheizenden Raum drastisch</li>
+                <li>Kleidung in Schichten tragen (Luft zwischen Schichten isoliert)</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Häufige Fehler:</strong><br>
+                ❌ Kerzen oder offenes Feuer am Fenster (sichtbares Signal für Plünderer)<br>
+                ❌ Alle Räume heizen wollen (Ressourcenverschwendung)<br>
+                ❌ Keine Fluchtwege planen (mindestens 2 Ausgänge identifizieren)<br>
+                ❌ Kohle/Holzöfen ohne ausreichende Belüftung nutzen (Kohlenmonoxidvergiftung!)
+            </div>
+
+            <h3 id="kommunikation">1.4 Kommunikationsnetz <span class="phase-indicator phase-important">Wichtig</span></h3>
+            
+            <h4>Vertrauensring etablieren:</h4>
+            <ul>
+                <li><strong>Kerngruppe (Ring 1):</strong> 3-5 Personen (unmittelbare Nachbarn/Familie) mit komplementären Fähigkeiten</li>
+                <li><strong>Nachbarschaft (Ring 2):</strong> 10-20 Haushalte für gegenseitige Alarmierung und Ressourcenpooling</li>
+                <li><strong>Kommunikationsmittel ohne Infrastruktur:</strong>
+                    <ul>
+                        <li><abbr title="Private Mobile Radio">PMR</abbr>-Funkgeräte (Reichweite 3-10km je nach Terrain, lizenzfrei)</li>
+                        <li><abbr title="Citizen Band">CB</abbr>-Funk (größere Reichweite, benötigt Gerät)</li>
+                        <li>Optische Signale: Spiegel bei Tag, abgedeckte Taschenlampen bei Nacht (Morsecode)</li>
+                        <li>Akustische Signale: Trillerpfeifen, vereinbarte Klopfzeichen</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Vereinbarte Signale (Beispiel):</h4>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Signal</th>
+                            <th>Bedeutung</th>
+                            <th>Aktion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1x lang</td>
+                            <td>Alles ok / Routinemeldung</td>
+                            <td>Keine</td>
+                        </tr>
+                        <tr>
+                            <td>3x kurz</td>
+                            <td>Hilfe benötigt</td>
+                            <td>Nachschauen gehen</td>
+                        </tr>
+                        <tr>
+                            <td>Dauerton / Wiederholung</td>
+                            <td>Gefahr / Angriff</td>
+                            <td>Verstärkte Verteidigung / Flucht vorbereiten</td>
+                        </tr>
+                        <tr>
+                            <td>2x lang, 1x kurz</td>
+                            <td>Versammlung am Treffpunkt</td>
+                            <td>Zum vereinbarten Ort begeben</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="warning-box">
+                <strong>Häufige Fehler:</strong><br>
+                ❌ Funkfrequenzen unverschlüsselt mit Standortangaben nutzen (Abhörbarkeit)<br>
+                ❌ Zu große Gruppen bilden (Informationslecks, Koordinationsprobleme)<br>
+                ❌ Keine Rendezvous-Punkte für den Notfall vereinbaren<br>
+                ❌ Handy-Akkus für sinnloses Probieren verschwenden
+            </div>
+
+            <h3 id="psychologie">1.5 Krisenpsychologie <span class="phase-indicator phase-important">Wichtig</span></h3>
+            
+            <p>Die psychologische Komponente wird oft unterschätzt, ist aber für das Überleben genauso wichtig wie physische Vorbereitung.</p>
+
+            <h4>Die 5 Phasen der Krisenreaktion:</h4>
+            <ol>
+                <li><strong>Schock/Verleugnung</strong> (Stunden 0-6): "Das kann nicht sein." → Handeln Sie trotzdem mechanisch Ihre Checkliste ab.</li>
+                <li><strong>Panik/Angst</strong> (Tag 1-2): Adrenalin, Hyperaktivität oder Erstarrung → Atmen Sie bewusst, konzentrieren Sie sich auf die nächste Aufgabe.</li>
+                <li><strong>Verhandeln</strong> (Tag 2-4): "Wenn ich nur X hätte..." → Akzeptieren Sie die Realität, arbeiten Sie mit dem Vorhandenen.</li>
+                <li><strong>Depression</strong> (Woche 1-2): Hoffnungslosigkeit, Antriebslosigkeit → Routine etablieren, kleine Erfolge feiern.</li>
+                <li><strong>Akzeptanz</strong> (ab Woche 2+): Anpassung an neue Realität → Langfristplanung beginnen.</li>
+            </ol>
+
+            <h4>Praktische Stabilisierungstechniken:</h4>
+            <ul>
+                <li><strong>4-7-8 Atmung:</strong> 4 Sekunden einatmen, 7 Sekunden halten, 8 Sekunden ausatmen. Reduziert Panikreaktion.</li>
+                <li><strong>Routine etablieren:</strong> Feste Zeiten für Mahlzeiten, Wache, Schlaf. Struktur gibt Sicherheit.</li>
+                <li><strong>Kleine Ziele setzen:</strong> Nicht "Wir müssen überleben", sondern "Heute bauen wir den Wasserfilter."</li>
+                <li><strong>Physische Aktivität:</strong> 10 Minuten Bewegung reduziert Stresshormone messbar.</li>
+                <li><strong>Soziale Interaktion:</strong> Auch kurze Gespräche stabilisieren die Psyche.</li>
+            </ul>
+
+            <div class="tip-box">
+                Kinder brauchen besondere Aufmerksamkeit: Erklären Sie die Situation altersgerecht, geben Sie ihnen kleine Aufgaben (Verantwortungsgefühl), und halten Sie Routinen wie Schlafenszeiten ein.
+            </div>
+        </section>
+
+        <!-- ===== TEIL II: ETABLIERUNG ===== -->
+        <section id="etablierung">
+            <h2>TEIL II: ETABLIERUNG - Woche 1 bis 4 <span class="phase-indicator phase-important">Wichtig</span></h2>
+            <p>Die ersten drei Tage waren Instinkt und Reaktion. Die nächsten vier Wochen sind Strategie und Systematik.</p>
+
+            <h3 id="wasser-lang">2.1 Nachhaltige Wasserversorgung <span class="phase-indicator phase-critical">Lebenswichtig</span></h3>
+            
+            <h4>Regenwasser-Sammelsystem:</h4>
+            <ul>
+                <li><strong>Einfache Installation:</strong> Plane oder Planen als Trichter, in große Behältnisse geleitet (Mülleimer, Badewanne, Fässer)</li>
+                <li><strong>Dachrinnen-Umleitung:</strong> Falls verfügbar, Fallrohr in Sammelbehälter leiten</li>
+                <li><strong>Filtration:</strong> 3-Stufen-System (Laubsieb → Sandfilter → Aktivkohle)</li>
+                <li><strong>Lagerung:</strong> Dunkle Behältnisse, kühl, fest abgedeckt (gegen Mückenlarven und Algen)</li>
+            </ul>
+
+            <h4>Grundwasser und natürliche Quellen:</h4>
+            <ul>
+                <li><strong>Brunnen:</strong> Bohrung tiefer als 3 Meter (oberflächliche Kontamination vermeiden)</li>
+                <li><strong>Fließgewässer:</strong> Flussaufwärts von Siedlungen und Industrie schöpfen</li>
+                <li><strong>Quellen:</strong> Ideal, aber selten - echte Quellen sind bereits gefiltert</li>
+                <li><strong>Sumpf/Teich:</strong> Immer kochen UND filtern (hohe bakterielle Last)</li>
+            </ul>
+
+            <h4>Materialliste für Woche 2-4:</h4>
+            <ul>
+                <li><strong>Lebenswichtig:</strong> 50m Schlauch, 2x 20L Kanister pro Person, Wasserreinigungstabletten (Chlor oder Jod), Baumwollstoffe für Filter</li>
+                <li><strong>Wichtig:</strong> Hochwertiger Wasserfilter (Katadyn, Sawyer, LifeStraw), Silberionen zur Konservierung</li>
+                <li><strong>Hilfreich:</strong> Solar-Destille (selbstbaubar), UV-Strahler (SteriPEN)</li>
+            </ul>
+
+            <h3 id="nahrung">2.2 Nahrungsbeschaffung <span class="phase-indicator phase-important">Wichtig</span></h3>
+            
+            <h4>Systematisches Vorrats-Scouting:</h4>
+            <ul>
+                <li><strong>Woche 1:</strong> Supermärkte, Lagerhallen (noch möglich, aber bereits riskanter)</li>
+                <li><strong>Ab Woche 2:</strong> Industrieküchen, Kantinen, Bäckereien (oft übersehen)</li>
+                <li><strong>Landwirtschaft:</strong> Bauernhöfe, Feldfrüchte, Nutztiere (nur mit Tauschgütern oder Kooperation)</li>
+            </ul>
+
+            <h4>Wildpflanzenkunde - Sofort essbar in Mitteleuropa:</h4>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pflanze</th>
+                            <th>Erkennungsmerkmal</th>
+                            <th>Essbare Teile</th>
+                            <th>Zubereitung</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Brennnessel</strong></td>
+                            <td>Gezähnte Blätter, brennende Härchen</td>
+                            <td>Blätter, Samen</td>
+                            <td>Kochen (entfernt Brennwirkung)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Löwenzahn</strong></td>
+                            <td>Gezähnte Blätter, gelbe Blüte, Milchsaft</td>
+                            <td>Alles (Blätter, Wurzel, Blüte)</td>
+                            <td>Roh, gekocht, Wurzel als Kaffee-Ersatz</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Giersch</strong></td>
+                            <td>Dreizählige Blätter, kantiger Stiel</td>
+                            <td>Junge Blätter</td>
+                            <td>Roh als Salat, gekocht wie Spinat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Spitzwegerich</strong></td>
+                            <td>Lange, schmale Blätter mit parallelen Adern</td>
+                            <td>Blätter</td>
+                            <td>Roh, als Umschlag bei Insektenstichen</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gänsefuß</strong></td>
+                            <td>Dreieckige Blätter, mehlig-weiße Unterseite</td>
+                            <td>Blätter, Samen</td>
+                            <td>Gekocht wie Spinat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Klettenwurzel</strong></td>
+                            <td>Große herzförmige Blätter, Kletten</td>
+                            <td>Wurzel (1. Jahr)</td>
+                            <td>Geschält und gekocht/gebraten</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="warning-box">
+                <strong>LEBENSWICHTIGE Warnung - Giftpflanzen:</strong><br>
+                ❌ <strong>NIEMALS</strong> unbekannte Pflanzen essen!<br>
+                ❌ Viele Giftpflanzen (Schierling, Herbstzeitlose, Maiglöckchen) ähneln essbaren Pflanzen<br>
+                ❌ "Hautkontakt-Test" (Pflanze 24h auf Haut testen) ist KEIN zuverlässiger Sicherheitstest<br>
+                ❌ Pilze: Nur sammeln, wenn Sie 100% sicher sind. Ein Fehler kann tödlich sein.
+            </div>
+
+            <h4>Einfache Fallen-Systeme:</h4>
+            <ul>
+                <li><strong>Mäuse/Ratten:</strong> Eimerfalle (Eimer, Draht, drehbare Flasche, Köder)</li>
+                <li><strong>Vögel:</strong> Schlinge oder improvisierte Kastenfalle</li>
+                <li><strong>Fische:</strong> Angeln, Reusen aus Flaschen</li>
+            </ul>
+
+            <div class="tip-box">
+                Insekten sind proteinreich und in vielen Kulturen Nahrung. Heuschrecken, Maden, Regenwürmer (nach dem Ausdrücken) sind essbar, wenn gekocht. Keine Insekten mit Warnsignalfarben (gelb-schwarz) oder haarige Raupen essen.
+            </div>
+
+            <h3 id="verteidigung">2.3 Verteidigung und Sicherheit <span class="phase-indicator phase-critical">Lebenswichtig</span></h3>
+            
+            <h4>Das Schichtenmodell der Verteidigung:</h4>
+            
+            <p><strong>Schicht 1 - Unsichtbarkeit (beste Verteidigung):</strong></p>
+            <ul>
+                <li>Sichtbaren Leerstand simulieren (verbarrikadierte Fenster, "verlassen" aussehen)</li>
+                <li>Kein Licht, kein Lärm, keine Rauchzeichen, keine Essensgerüche nach außen</li>
+                <li>Alternative Eingänge nutzen (Hintereingang, Kellerzugang)</li>
+                <li>Keine wertvollen Gegenstände sichtbar lagern</li>
+            </ul>
+
+            <p><strong>Schicht 2 - Verzögerung:</strong></p>
+            <ul>
+                <li>Türen verstärken (Möbel dahinter, Querbalken, zusätzliche Schlösser)</li>
+                <li>Fenster: Gardinenstangen als Sperren, Folie gegen Glassplitter, Bretter</li>
+                <li>Alarmsysteme: Dosen mit Steinen an Schnüren, Kieswege die knirschen</li>
+                <li>Beleuchtung: Bewegungsmelder mit Batterie (wenn vorhanden)</li>
+            </ul>
+
+            <p><strong>Schicht 3 - Konfrontation (absolut letzte Option):</strong></p>
+            <ul>
+                <li><strong>Improvisierte Abschreckung:</strong> Lautes Auftreten, Lärm, Beleuchtung</li>
+                <li><strong>Physische Mittel:</strong> Spray (Deo/Haarspray + Feuerzeug nur als Bluff), Besenstiel, Stock</li>
+                <li><strong>Taktik:</strong> Nie allein, immer Fluchtweg offen, Ziel ist VERTREIBUNG, nicht Konfrontation</li>
+            </ul>
+
+            <div class="priority-box">
+                <h4>Grundregel der Krisenverteidigung</h4>
+                <p>Eigentum ist ersetzbar, Leben nicht. Wenn Angreifer überlegen sind, geben Sie auf, was sie wollen. Verstecken Sie kritische Vorräte (Wasser, Medikamente) an mehreren Orten.</p>
+            </div>
+
+            <h4>Wachsystem für Gruppen:</h4>
+            <ul>
+                <li><strong>2-Stunden-Schichten</strong> bei 4+ Personen (länger führt zu Unaufmerksamkeit)</li>
+                <li>Beobachtungsposten mit Sicht auf alle Zugangswege</li>
+                <li>Einfache Kommunikation zum Rest der Gruppe (Schnur mit Glocke, Funkgerät)</li>
+                <li>Wachplan schriftlich festhalten, regelmäßig rotieren</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Häufige fatale Fehler:</strong><br>
+                ❌ Schusswaffen ohne Training einsetzen (größere Gefahr für Sie als für Angreifer)<br>
+                ❌ Konfrontation bei Übermacht suchen<br>
+                ❌ Alle Vorräte an einem Ort lagern<br>
+                ❌ Alkohol während der Wache<br>
+                ❌ "Heldentum" - Ihr Leben ist wertvoller als jeder Gegenstand
+            </div>
+
+            <h3 id="medizin">2.4 Medizinische Versorgung ohne Arzt <span class="phase-indicator phase-critical">Lebenswichtig</span></h3>
+            
+            <h4>Notfall-Apotheke aus Hausmitteln:</h4>
+            <ul>
+                <li><strong>Wundversorgung:</strong> 
+                    <ul>
+                        <li>Honig (antibakterielle Eigenschaften, ideal für oberflächliche Wunden)</li>
+                        <li>Hochprozentiger Alkohol/Schnaps (Desinfektion, nicht trinken!)</li>
+                        <li>Nähnadel + Zahnseide (Wundnaht im äußersten Notfall)</li>
+                    </ul>
+                </li>
+                <li><strong>Schmerz/Fieber:</strong> 
+                    <ul>
+                        <li>Weidenrinde (enthält Salicin, Vorstufe von Aspirin) - als Tee</li>
+                        <li>Pfefferminztee (krampflösend, kühlend)</li>
+                        <li>Kalte Umschläge bei Fieber</li>
+                    </ul>
+                </li>
+                <li><strong>Durchfall (kann durch Dehydration tödlich sein!):</strong> 
+                    <ul>
+                        <li><strong>Elektrolytlösung:</strong> 1 Liter Wasser + 6 TL Zucker + ½ TL Salz (Lebensrettend!)</li>
+                        <li>Heilerde, Aktivkohle (bindet Giftstoffe)</li>
+                        <li>Schwarzer Tee (Gerbstoffe beruhigen den Darm)</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Kritische Verletzungen - Sofortmaßnahmen:</h4>
+            
+            <details>
+                <summary>Starke Blutung</summary>
+                <div>
+                    <ol>
+                        <li><strong>Direkter Druck:</strong> Mit sauberem Tuch fest auf die Wunde drücken, mindestens 10 Minuten ohne nachzuschauen</li>
+                        <li><strong>Druckverband:</strong> Verbandsmaterial fest um die Wunde wickeln, nicht abbinden</li>
+                        <li><strong>Hochlagern:</strong> Verletzte Extremität über Herzhöhe</li>
+                        <li><strong>Tourniquet (Abbindung):</strong> NUR bei lebensbedrohlicher Blutung (Amputation, Arterienblutung). Uhrzeit der Anlage notieren! Maximal 2 Stunden.</li>
+                    </ol>
+                </div>
+            </details>
+
+            <details>
+                <summary>Knochenbrüche</summary>
+                <div>
+                    <ul>
+                        <li><strong>Immobilisierung:</strong> Mit starren Materialien (Bretter, gerollte Zeitungen, Stöcke) + Polsterung fixieren</li>
+                        <li><strong>Gelenke ober- und unterhalb</strong> des Bruchs mitfixieren</li>
+                        <li><strong>Offene Brüche:</strong> Knochen NIEMALS zurückdrücken, steril abdecken, Schockgefahr!</li>
+                        <li><strong>Kühlen:</strong> Schwellung reduzieren (Eis in Tuch gewickelt, nicht direkt auf Haut)</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>Verbrennungen</summary>
+                <div>
+                    <ul>
+                        <li><strong>Grad 1 (Rötung):</strong> Kühlen mit fließendem Wasser (15-20 Min), Aloe Vera</li>
+                        <li><strong>Grad 2 (Blasen):</strong> Blasen NICHT öffnen! Steril abdecken (Frischhaltefolie ideal), kühlen</li>
+                        <li><strong>Grad 3 (Verkohlung):</strong> NICHT kühlen (Unterkühlungsgefahr), trocken und steril abdecken, Schockprophylaxe</li>
+                        <li><strong>Wichtig:</strong> Kleidung nur entfernen wenn sie nicht mit der Wunde verklebt ist</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>Schock erkennen und behandeln</summary>
+                <div>
+                    <p><strong>Anzeichen:</strong> Blasse, kalte, feuchte Haut; schneller, schwacher Puls; Verwirrtheit; Unruhe</p>
+                    <ul>
+                        <li>Flach lagern, Beine hoch (AUSSER bei Kopf-/Brustverletzung)</li>
+                        <li>Wärme erhalten (Decke unter UND über den Patienten)</li>
+                        <li>Beruhigen, nicht alleine lassen</li>
+                        <li>KEINE Flüssigkeit bei Bewusstlosigkeit (Erstickungsgefahr)</li>
+                    </ul>
+                </div>
+            </details>
+
+            <div class="warning-box">
+                <strong>Wann professionelle Hilfe ZWINGEND nötig ist</strong> (auch in der Krise versuchen zu beschaffen):<br>
+                • Bewusstlosigkeit > 1 Minute<br>
+                • Unstillbare Blutungen<br>
+                • Offene Brüche<br>
+                • Brustschmerzen mit Atemnot<br>
+                • Schwere allergische Reaktion<br>
+                • Vergiftungsverdacht<br>
+                • Appendizitis-Verdacht (rechtsseitiger Unterbauchschmerz)
+            </div>
+
+            <h3 id="hygiene">2.5 Krisenhygiene <span class="phase-indicator phase-important">Wichtig</span></h3>
+            
+            <p>Mangelhafte Hygiene tötet in Krisenzeiten mehr Menschen als Hunger. Seuchen breiteten sich historisch nach Katastrophen rasend aus.</p>
+
+            <h4>Latrinen-System:</h4>
+            <ul>
+                <li><strong>Position:</strong> 1m tiefes Loch, 30cm breit, mindestens <strong>30 Meter von jeder Wasserquelle</strong> entfernt und hangabwärts</li>
+                <li><strong>Nach jedem Gang:</strong> Mit Erde, Sand oder Asche bedecken (Geruch, Fliegen, Parasiten)</li>
+                <li><strong>Abfalltrennung:</strong> Urin separat sammeln (verdünnt 1:10 als Dünger nutzbar, aber nicht auf Essbares)</li>
+                <li><strong>Handwaschstation:</strong> Direkt neben der Latrine einrichten</li>
+            </ul>
+
+            <h4>Körperhygiene mit minimalem Wasser:</h4>
+            <ul>
+                <li><strong>Tägliche "Katzenwäsche":</strong> Waschlappen + 500ml Wasser - Achseln, Leiste, Füße priorisieren</li>
+                <li><strong>Haarwäsche:</strong> Natron (Backpulver) trocken einreiben, ausbürsten</li>
+                <li><strong>Zähne:</strong> Holzkohlepulver zum Polieren, Salzwasser zum Spülen</li>
+                <li><strong>Menstruationshygiene:</strong> Waschbare Stoffbinden, Menstruationstassen (wenig Wasser, hohe Hygiene)</li>
+            </ul>
+
+            <h4>Infektionsschutz in der Gruppe:</h4>
+            <ul>
+                <li><strong>Isolierung Erkrankter:</strong> Separater Raum, eigene Latrine, eigenes Geschirr</li>
+                <li><strong>Handschutz:</strong> Plastiktüten über den Händen bei Kontakt mit Körperflüssigkeiten</li>
+                <li><strong>Kontaminierte Wäsche:</strong> 10 Minuten bei 60°C+ kochen</li>
+                <li><strong>Lebensmittel:</strong> Getrennte Schneidebretter für roh und gekocht, alles gut durchgaren</li>
+            </ul>
+
+            <div class="tip-box">
+                Händewaschen ist die effektivste Krankheitsprävention. 20 Sekunden mit Seife (oder Asche als Ersatz) nach jedem Toilettengang, vor jedem Essen, nach Kontakt mit Kranken.
+            </div>
+        </section>
+
+        <!-- ===== TEIL III: LANGFRISTIG ===== -->
+        <section id="langfristig">
+            <h2>TEIL III: LANGFRISTIGES ÜBERLEBEN - Wiederaufbau <span class="phase-indicator phase-helpful">Aufbau</span></h2>
+            <p>Überleben ist nicht das Ziel. Der Wiederaufbau einer funktionierenden Gemeinschaft ist das Ziel.</p>
+
+            <h3 id="gemeinschaft">3.1 Gemeinschaftsbildung</h3>
+            
+            <h4>Tauschsystem-Ökonomie aufbauen:</h4>
+            <ul>
+                <li><strong>Kurzfristige Währungen:</strong> Alkohol, Zigaretten, Medikamente (hohe Nachfrage, endlich)</li>
+                <li><strong>Mittelfristige Währungen:</strong> Skills und Arbeitszeit (Reparaturen, medizinische Versorgung)</li>
+                <li><strong>Langfristige Währungen:</strong> Werkzeug, Saatgut, Nutztiere, Brennstoff</li>
+            </ul>
+
+            <h4>Dorf-Strukturierung:</h4>
+            <ul>
+                <li><strong>Spezialisierung:</strong> Medizin, Landwirtschaft, Verteidigung, Handwerk, Bildung - jeder hat eine Hauptaufgabe</li>
+                <li><strong>Rotation:</strong> Jeder lernt Grundlagen aller Bereiche (Redundanz bei Ausfall)</li>
+                <li><strong>Rechtsprechung:</strong> Schriftliche Vereinbarungen, Gemeinderat aus gewählten Vertretern, Exil als schlimmste Strafe</li>
+                <li><strong>Konfliktlösung:</strong> Mediation durch neutrale Dritte, nicht durch Gewalt</li>
+            </ul>
+
+            <h3 id="energie">3.2 Energiesysteme</h3>
+            
+            <h4>Solar-Minimal-System (selbst aufbaubar):</h4>
+            <ul>
+                <li><strong>Komponenten:</strong> Solarpanel 100W + Laderegler + Autobatterie (12V) + Wechselrichter 300W</li>
+                <li><strong>Betreibbar:</strong> LED-Licht, Handy-Ladung, kleine 12V-Geräte</li>
+                <li><strong>Vorkrisenkost:</strong> ca. 200-400€</li>
+            </ul>
+
+            <h4>Effiziente Feuernutzung:</h4>
+            <ul>
+                <li><strong>Rocket-Stove:</strong> Aus Blechdosen baubar, hocheffizient, wenig Rauch, wenig Brennstoff</li>
+                <li><strong>Biogas:</strong> Aus organischen Abfällen in luftdichtem Behälter (fortgeschritten)</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Lebensgefährliche Fehler:</strong><br>
+                ❌ Feuer in geschlossenen Räumen ohne Abzug (Kohlenmonoxidvergiftung!)<br>
+                ❌ Benzin/Diesel unsicher lagern (Explosion, Brandgefahr)<br>
+                ❌ Batterien überlasten oder kurzschließen
+            </div>
+
+            <h3 id="landwirtschaft">3.3 Subsistenzwirtschaft</h3>
+            
+            <h4>Schnell wachsende Nahrungsmittel (erste Ernte in Wochen):</h4>
+            <ul>
+                <li><strong>Radieschen:</strong> 3-4 Wochen bis zur Ernte</li>
+                <li><strong>Salat:</strong> 4-6 Wochen</li>
+                <li><strong>Spinat:</strong> 4-6 Wochen</li>
+                <li><strong>Bohnen:</strong> 6-8 Wochen</li>
+                <li><strong>Sprossen:</strong> 3-7 Tage (Mungobohnen, Linsen, Alfalfa)</li>
+            </ul>
+
+            <h4>Langfristige Grundversorgung:</h4>
+            <ul>
+                <li><strong>Kartoffeln:</strong> Hoher Ertrag, lagerfähig, einfach anzubauen</li>
+                <li><strong>Kürbis/Zucchini:</strong> Sehr ertragreich, lange haltbar</li>
+                <li><strong>Kohl:</strong> Winterhart, vitaminreich, fermentierbar</li>
+                <li><strong>Zwiebeln/Knoblauch:</strong> Antibakteriell, lagerfähig, geschmacksverstärkend</li>
+            </ul>
+
+            <div class="tip-box">
+                Saatgut von samenfesten Sorten verwenden (keine F1-Hybriden). Nur samenfeste Sorten können für die nächste Aussaat verwendet werden.
+            </div>
+
+            <h3 id="konservierung">3.4 Lebensmittelkonservierung</h3>
+            
+            <h4>Trocknung (einfachste Methode):</h4>
+            <ul>
+                <li><strong>Solar-Trockner:</strong> Rahmen mit Fliegengitter, schwarzer Untergrund, gute Luftzirkulation</li>
+                <li><strong>Geeignet:</strong> Pilze, Früchte, Kräuter, dünne Fleischstreifen</li>
+                <li><strong>Ziel:</strong> Wassergehalt unter 15%</li>
+                <li><strong>Lagerung:</strong> Luftdicht, dunkel, kühl (idealerweise in Gläsern)</li>
+            </ul>
+
+            <h4>Fermentation (konserviert und schafft Nährstoffe):</h4>
+            <ul>
+                <li><strong>Sauerkraut:</strong> Kohl + 2% Salz (20g pro kg) + Andrücken bis Saft austritt → anaerobe Milchsäuregärung</li>
+                <li><strong>Kimchi:</strong> Chinakohl mit Gewürzen (Chili, Ingwer, Knoblauch)</li>
+                <li><strong>Eingelegtes Gemüse:</strong> In Salzlake (3-5% Salz)</li>
+                <li><strong>Vorteil:</strong> Vitamin C bleibt erhalten, Probiotika entstehen</li>
+            </ul>
+
+            <h4>Räuchern:</h4>
+            <ul>
+                <li><strong>Kalträuchern (&lt;25°C):</strong> Langlebig (Monate), aber zeitaufwändig (24-48h)</li>
+                <li><strong>Heißräuchern (60-80°C):</strong> Schneller, aber kürzere Haltbarkeit (Wochen)</li>
+                <li><strong>Rauchholz:</strong> Hartholz wie Buche, Eiche, Apfel. NIEMALS Nadelhölzer (Harze sind giftig)!</li>
+            </ul>
+
+            <h3 id="handwerk">3.5 Handwerksbasics</h3>
+            
+            <h4>Reparatur statt Neukauf:</h4>
+            <ul>
+                <li><strong>Nähen:</strong> Sattelstich für strapazierfähige Reparaturen (Schuhe, Taschen)</li>
+                <li><strong>Stopfen:</strong> Socken und Kleidung halten 3x länger mit regelmäßiger Reparatur</li>
+                <li><strong>Flicken:</strong> Aufnähen oder Aufkleben (Heißkleber, Sekundenkleber)</li>
+            </ul>
+
+            <h4>Improvisiertes Werkzeug:</h4>
+            <ul>
+                <li><strong>Messer schärfen:</strong> Keramiktasse-Boden, glatter Stein</li>
+                <li><strong>Seil:</strong> Aus Pflanzenfasern (Brennnessel, Weide) flechten</li>
+                <li><strong>Behälter:</strong> Birkenrinde wasserdicht falten, Ton formen und brennen</li>
+            </ul>
+        </section>
+
+        <!-- ===== TEIL IV: KRITISCHE SKILLS ===== -->
+        <section id="skills">
+            <h2>TEIL IV: KRITISCHE SKILLS - Sofort erlernbar</h2>
+            <p>Diese Fähigkeiten sollten Sie JETZT üben, nicht erst in der Krise. Wissen ohne Praxis ist nutzlos.</p>
+
+            <h3 id="feuer">4.1 Feuer machen ohne Streichhölzer <span class="phase-indicator phase-critical">Lebenswichtig</span></h3>
+            
+            <h4>Methode 1: Feuerbohrer (Bow Drill) - Schwierig, aber ohne Hilfsmittel möglich</h4>
+            
+            <p><strong>Materialien:</strong></p>
+            <ul>
+                <li>Feuerbrett (weiches, trockenes Holz: Pappel, Weide, Linde)</li>
+                <li>Spindel (gleiches Holz, trocken, daumendicke Stange)</li>
+                <li>Bogen (gebogener Stock mit Schnur)</li>
+                <li>Handstück/Lager (Hartholz oder Stein mit Vertiefung)</li>
+                <li>Zundernest (trockenes Gras, Birkenrinde, Flugsamen)</li>
+            </ul>
+
+            <h4>Schritt-für-Schritt:</h4>
+            <ol>
+                <li>Feuerbrett flach hinlegen, daumengroße Vertiefung einschnitzen</li>
+                <li>V-förmige Kerbe vom Rand zur Vertiefung schneiden (hier sammelt sich die Glut)</li>
+                <li>Spindel oben anspitzen (gleitet im Handstück), unten rund lassen</li>
+                <li>Schnur um Spindel wickeln, Bogen horizontal hin- und herbewegen</li>
+                <li>Mit Handstück von oben Druck ausüben</li>
+                <li>Schwarzes Pulver sammelt sich in der Kerbe → weiter bohren bis es raucht</li>
+                <li>Glut vorsichtig in vorbereitetes Zundernest übertragen</li>
+                <li>Sanft pusten bis Flamme entsteht</li>
+            </ol>
+
+            <h4>Methode 2: Feuerstahl (mit Vorbereitung, sehr zuverlässig)</h4>
+            <p>Ferrocerium-Stab mit Metallschaber erzeugt Funken von 3000°C. Funktioniert auch nass.</p>
+
+            <h4>Methode 3: Lupe/Brennglas (nur bei Sonne)</h4>
+            <p>Sonnenlicht durch Lupe auf dunkles Zundermaterial fokussieren. Auch Brillengläser oder Wasserflasche-Boden funktionieren.</p>
+
+            <h4>Methode 4: Batterie + Stahlwolle (Notfall)</h4>
+            <p>Stahlwolle zwischen beide Pole einer 9V-Batterie halten → fängt sofort Feuer.</p>
+
+            <div class="warning-box">
+                <strong>Häufige Fehler beim Feuermachen:</strong><br>
+                ❌ Falsches Holz (zu hart, zu nass - erkennbar an Qualm ohne Glut)<br>
+                ❌ Zundernest nicht vorbereitet haben<br>
+                ❌ Zu stark pusten (Glut erstickt)<br>
+                ❌ Feuer an ungeeigneter Stelle (Wind, nasser Boden, unter Bäumen)
+            </div>
+
+            <h3 id="wasser-auf">4.2 Wasser-Aufbereitung (Zusammenfassung) <span class="phase-indicator phase-critical">Lebenswichtig</span></h3>
+            
+            <h4>Das 3-Stufen-System für kontaminiertes Wasser:</h4>
+            <ol>
+                <li><strong>Sedimentation:</strong> 24h stehen lassen, Grobpartikel sinken ab, klares Wasser abschöpfen</li>
+                <li><strong>Filtration:</strong> Durch improvisierten Filter (siehe Kapitel 1.1) oder mehrlagiges Tuch</li>
+                <li><strong>Desinfektion:</strong>
+                    <ul>
+                        <li><strong>Kochen:</strong> Sicherste Methode - 1 Minute sprudelnd kochen</li>
+                        <li><strong>Chemisch:</strong> 2 Tropfen Bleiche pro Liter, 30 Min. warten</li>
+                        <li><strong>UV (SODIS):</strong> Klare PET-Flasche, 6h direkte Sonne</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3 id="erste-hilfe">4.3 Notfallmedizin-Kurzreferenz <span class="phase-indicator phase-critical">Lebenswichtig</span></h3>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Situation</th>
+                            <th>Sofortmaßnahme</th>
+                            <th>Vermeiden</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Starke Blutung</td>
+                            <td>Direkter Druck, Druckverband</td>
+                            <td>Tourniquet außer bei Amputation</td>
+                        </tr>
+                        <tr>
+                            <td>Bewusstlosigkeit (atmet)</td>
+                            <td>Stabile Seitenlage</td>
+                            <td>Auf Rücken legen (Erstickungsgefahr)</td>
+                        </tr>
+                        <tr>
+                            <td>Atemstillstand</td>
+                            <td>Herzdruckmassage, Beatmung</td>
+                            <td>Warten</td>
+                        </tr>
+                        <tr>
+                            <td>Knochenbruch</td>
+                            <td>Immobilisieren, Kühlen</td>
+                            <td>Bewegen, Einrenken versuchen</td>
+                        </tr>
+                        <tr>
+                            <td>Verbrennung</td>
+                            <td>Kühlen (Grad 1-2), abdecken</td>
+                            <td>Blasen öffnen, Eis direkt auf Haut</td>
+                        </tr>
+                        <tr>
+                            <td>Unterkühlung</td>
+                            <td>Langsam aufwärmen, warme Getränke</td>
+                            <td>Schnelles Aufwärmen, Alkohol</td>
+                        </tr>
+                        <tr>
+                            <td>Hitzschlag</td>
+                            <td>Schatten, Kühlen, Flüssigkeit</td>
+                            <td>Körper in Eiswasser tauchen</td>
+                        </tr>
+                        <tr>
+                            <td>Durchfall</td>
+                            <td>Elektrolytlösung (Zucker-Salz-Wasser)</td>
+                            <td>Fasten, Milchprodukte</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="navigation">4.4 Navigation ohne Technik <span class="phase-indicator phase-important">Wichtig</span></h3>
+            
+            <h4>Himmelsrichtungen bestimmen:</h4>
+            <ul>
+                <li><strong>Polarstern (nachts):</strong> Letzter Stern der Deichsel des Kleinen Wagens. Zeigt exakt nach Norden.</li>
+                <li><strong>Sonnenkompass (tags):</strong> 
+                    <ol>
+                        <li>Stock senkrecht in den Boden stecken</li>
+                        <li>Schattenspitze markieren</li>
+                        <li>15-30 Minuten warten, neue Spitze markieren</li>
+                        <li>Linie zwischen Markierungen = Ost-West (erste Markierung = Westen)</li>
+                    </ol>
+                </li>
+                <li><strong>Analoguhr-Methode:</strong> Stundenzeiger zur Sonne, Mitte zwischen Stundenzeiger und 12-Uhr-Position zeigt nach Süden (Nordhalbkugel)</li>
+            </ul>
+
+            <h4>Orientierung im Gelände:</h4>
+            <ul>
+                <li>Fließendes Wasser führt zu Siedlungen (flussabwärts folgen)</li>
+                <li>Straßen und Bahnlinien folgen der Topographie und führen zu Menschen</li>
+                <li>Hochspannungsleitungen führen zu Siedlungen</li>
+                <li>Moos wächst NICHT zuverlässig auf der Nordseite von Bäumen (Mythos!)</li>
+            </ul>
+
+            <h3 id="knoten">4.5 Knotenkunde - Die 5 wichtigsten Knoten</h3>
+            
+            <ol>
+                <li><strong>Palstek:</strong> Bildet feste Schlinge, die sich nicht zuzieht. Für Rettung, Befestigung.</li>
+                <li><strong>Kreuzknoten:</strong> Verbindet zwei gleich dicke Seile. NICHT für Sicherungsseile!</li>
+                <li><strong>Mastwurf:</strong> Schnelle Befestigung an Pfahl/Ast. Leicht zu lösen.</li>
+                <li><strong>Achterknoten:</strong> Stopper am Seilende. Sehr sicher.</li>
+                <li><strong>Prusik-Knoten:</strong> Rutschsicher auf einem anderen Seil. Für Klettern/Bergung.</li>
+            </ol>
+
+            <div class="tip-box">
+                Üben Sie diese Knoten, bis Sie sie im Dunkeln binden können. In einer Stresssituation haben Sie keine Zeit zum Nachdenken.
+            </div>
+        </section>
+
+        <!-- ===== ANHANG ===== -->
+        <section id="anhang">
+            <h2>Anhang: Checklisten für den Einstieg</h2>
+            <p>Diese Checklisten können Sie direkt nutzen. Der Fortschritt wird in Ihrem Browser gespeichert.</p>
+
+            <h3>📦 Sofort-Lager (72h Autarkie)</h3>
+            <div class="checklist">
+                <div class="checklist-title">Grundversorgung</div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="lag1">
+                    <label for="lag1">Wasser: 9-15 Liter pro Person (trinkfertig)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="lag2">
+                    <label for="lag2">Essen: Müsliriegel, Konserven, Trockennahrung (3000 kcal/Tag)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="lag3">
+                    <label for="lag3">Licht: Stirnlampe + Ersatzbatterien (Hände frei!)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="lag4">
+                    <label for="lag4">Erste Hilfe: Verbandsmaterial, Schmerzmittel, persönliche Medikamente</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="lag5">
+                    <label for="lag5">Kommunikation: PMR-Funkgerät, Kurbel-Radio, Powerbank</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="lag6">
+                    <label for="lag6">Schutz: Regenjacke, feste Schuhe, Handschuhe, Mütze</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="lag7">
+                    <label for="lag7">Werkzeug: Multitool, Taschenmesser, Panzerband, Paracord</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="lag8">
+                    <label for="lag8">Feuer: 2x Feuerzeug, Streichhölzer (wasserdicht), Feuerstahl</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="lag9">
+                    <label for="lag9">Dokumente: Kopien von Ausweisen, Bargeld, wichtige Nummern</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="lag10">
+                    <label for="lag10">Hygiene: Toilettenpapier, Seife, Zahnbürste, Handtücher</label>
+                </div>
+            </div>
+
+            <h3>📚 Wissenssicherung (ausdrucken und laminieren!)</h3>
+            <div class="checklist">
+                <div class="checklist-item">
+                    <input type="checkbox" id="wis1">
+                    <label for="wis1">Dieses Handbuch ausgedruckt</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="wis2">
+                    <label for="wis2">Lokales Wildpflanzen-Bestimmungsbuch</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="wis3">
+                    <label for="wis3">"Where There Is No Doctor" (PDF frei verfügbar)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="wis4">
+                    <label for="wis4">Topographische Karte der Region 1:25000</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="wis5">
+                    <label for="wis5">Saatgut-Anleitung für Anfänger</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="wis6">
+                    <label for="wis6">Erste-Hilfe-Karte (laminiert)</label>
+                </div>
+            </div>
+
+            <h3>🎒 72-Stunden-Fluchtrucksack (Bug-Out-Bag)</h3>
+            
+            <div class="checklist">
+                <div class="checklist-title">Wasser & Nahrung</div>
+                <div class="checklist-item"><input type="checkbox" id="bob1"><label for="bob1">3-6 Liter Wasser (tragbar)</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob2"><label for="bob2">Wasserfilter (Sawyer Mini, LifeStraw o.ä.)</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob3"><label for="bob3">Wasserreinigungstabletten (Backup)</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob4"><label for="bob4">Energieriegel / Trockennahrung (6000+ kcal)</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob5"><label for="bob5">Elektrolytpulver</label></div>
+            </div>
+
+            <div class="checklist">
+                <div class="checklist-title">Unterkunft & Wärme</div>
+                <div class="checklist-item"><input type="checkbox" id="bob6"><label for="bob6">Tarp oder Notfall-Biwaksack</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob7"><label for="bob7">Rettungsdecke (2x)</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob8"><label for="bob8">Paracord (15-30m)</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob9"><label for="bob9">Wechselkleidung (1x komplett)</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob10"><label for="bob10">Regenponcho</label></div>
+            </div>
+
+            <div class="checklist">
+                <div class="checklist-title">Werkzeug & Feuer</div>
+                <div class="checklist-item"><input type="checkbox" id="bob11"><label for="bob11">Multitool (Leatherman o.ä.)</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob12"><label for="bob12">Feststehende Klinge / Messer</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob13"><label for="bob13">Feuerzeug (2x) + Feuerstahl</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob14"><label for="bob14">Zunder (wasserdicht verpackt)</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob15"><label for="bob15">Panzerband (5m)</label></div>
+            </div>
+
+            <div class="checklist">
+                <div class="checklist-title">Navigation & Kommunikation</div>
+                <div class="checklist-item"><input type="checkbox" id="bob16"><label for="bob16">Kompass (mit Spiegel)</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob17"><label for="bob17">Karte der Region (physisch)</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob18"><label for="bob18">PMR-Funkgerät + Ersatzbatterien</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob19"><label for="bob19">Notfall-Pfeife</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob20"><label for="bob20">Signalspiegel</label></div>
+            </div>
+
+            <div class="checklist">
+                <div class="checklist-title">Erste Hilfe</div>
+                <div class="checklist-item"><input type="checkbox" id="bob21"><label for="bob21">Tourniquet (CAT oder SOF-T)</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob22"><label for="bob22">Israelischer Verband</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob23"><label for="bob23">Verbandsmaterial, Pflaster</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob24"><label for="bob24">Schmerzmittel, Durchfallmedikament</label></div>
+                <div class="checklist-item"><input type="checkbox" id="bob25"><label for="bob25">Persönliche Medikamente (2-Wochen-Reserve)</label></div>
+            </div>
+
+            <h3>🏠 Langzeit-Vorratshaltung (3 Monate)</h3>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kategorie</th>
+                            <th>Produkt</th>
+                            <th>Menge (2 Personen)</th>
+                            <th>Haltbarkeit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4">Kohlenhydrate</td>
+                            <td>Reis</td>
+                            <td>30 kg</td>
+                            <td>Unbegrenzt (trocken)</td>
+                        </tr>
+                        <tr>
+                            <td>Nudeln</td>
+                            <td>15 kg</td>
+                            <td>2+ Jahre</td>
+                        </tr>
+                        <tr>
+                            <td>Haferflocken</td>
+                            <td>15 kg</td>
+                            <td>1-2 Jahre</td>
+                        </tr>
+                        <tr>
+                            <td>Honig</td>
+                            <td>5 kg</td>
+                            <td>Unbegrenzt</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Protein</td>
+                            <td>Bohnen/Linsen (getrocknet)</td>
+                            <td>10 kg</td>
+                            <td>2+ Jahre</td>
+                        </tr>
+                        <tr>
+                            <td>Nüsse</td>
+                            <td>5 kg</td>
+                            <td>6-12 Monate</td>
+                        </tr>
+                        <tr>
+                            <td>Konservenfleisch/-fisch</td>
+                            <td>10 kg</td>
+                            <td>3-5 Jahre</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Fette</td>
+                            <td>Pflanzenöl</td>
+                            <td>5 L</td>
+                            <td>1-2 Jahre</td>
+                        </tr>
+                        <tr>
+                            <td>Ghee/Schmalz</td>
+                            <td>2 kg</td>
+                            <td>1+ Jahr</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Sonstiges</td>
+                            <td>Salz</td>
+                            <td>3 kg</td>
+                            <td>Unbegrenzt</td>
+                        </tr>
+                        <tr>
+                            <td>Zucker</td>
+                            <td>3 kg</td>
+                            <td>Unbegrenzt</td>
+                        </tr>
+                        <tr>
+                            <td>Multivitamine</td>
+                            <td>180 Tabletten</td>
+                            <td>2+ Jahre</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="priority-box">
+                <h4>Der wichtigste Grundsatz</h4>
+                <p>Die beste Ausrüstung ist nutzlos ohne Übung. <strong>Trainieren Sie jeden Monat einen Skill. Leben Sie jedes Quartal 48 Stunden ohne Strom und fließend Wasser.</strong> Die Muskelspeicherung und praktische Erfahrung übertreffen jede noch so vollständige Checkliste.</p>
+            </div>
+
+            <div class="info-box">
+                Diese Anleitung dient ausschließlich der Vorbereitung auf hypothetische Krisenszenarien. Beachten Sie lokale Gesetze bezüglich Waffen, Funkfrequenzen und Naturschutz auch in Notzeiten, wo immer dies möglich ist. Die Informationen ersetzen keine professionelle medizinische Beratung.
+            </div>
+
+            <h3>📞 Wichtige Notrufnummern (Deutschland)</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dienst</th>
+                            <th>Nummer</th>
+                            <th>Hinweis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Notruf (Feuerwehr/Rettung)</td>
+                            <td><strong>112</strong></td>
+                            <td>EU-weit, kostenlos</td>
+                        </tr>
+                        <tr>
+                            <td>Polizei</td>
+                            <td><strong>110</strong></td>
+                            <td>Deutschland</td>
+                        </tr>
+                        <tr>
+                            <td>Giftnotruf</td>
+                            <td>Regional verschieden</td>
+                            <td>Vorher notieren!</td>
+                        </tr>
+                        <tr>
+                            <td>THW</td>
+                            <td>0800 1122233</td>
+                            <td>Technisches Hilfswerk</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <p><strong>ÜBERLEBEN</strong> - Handbuch für den gesellschaftlichen Zusammenbruch</p>
+            <p style="font-size: 0.9rem; margin-top: 1rem;">Systematische Krisenvorsorge nach der Survival-Dreier-Regel</p>
+            <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--text-secondary);">Version 2.0 | Letzte Aktualisierung: Januar 2026</p>
+            <div class="footer-links">
+                <a href="#einleitung">↑ Nach oben</a>
+                <a href="javascript:window.print()">🖨️ Drucken</a>
+                <a href="https://github.com/yourusername/survival-guide" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <p style="font-size: 0.75rem; margin-top: 2rem; color: var(--text-secondary);">
+                Dieses Werk steht unter der <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> Lizenz.
+            </p>
+        </footer>
+    </main>
+
+    <!-- Buttons -->
+    <button onclick="window.print()" class="print-btn" aria-label="Seite drucken" title="Seite drucken">🖨️</button>
+    <button onclick="scrollToTop()" id="topBtn" aria-label="Nach oben scrollen" title="Nach oben">↑</button>
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading').classList.add('hidden');
+            }, 300);
+        });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            const btn = document.querySelector('.mobile-menu-btn');
+            const isOpen = nav.classList.toggle('active');
+            btn.setAttribute('aria-expanded', isOpen);
+            btn.textContent = isOpen ? '✕' : '☰';
+        }
+
+        // Scroll Functions
+        window.onscroll = function() {
+            scrollFunction();
+            updateProgressBar();
+        };
+
+        function scrollFunction() {
+            const topBtn = document.getElementById("topBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        function updateProgressBar() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            const progressBar = document.getElementById("progressBar");
+            progressBar.style.width = scrolled + "%";
+            progressBar.setAttribute('aria-valuenow', Math.round(scrolled));
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mainNav').classList.remove('active');
+                document.querySelector('.mobile-menu-btn').textContent = '☰';
+                document.querySelector('.mobile-menu-btn').setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Save checkbox states to localStorage
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                localStorage.setItem('checklist_' + this.id, this.checked);
+            });
+            
+            // Restore state on load
+            const saved = localStorage.getItem('checklist_' + checkbox.id);
+            if (saved === 'true') {
+                checkbox.checked = true;
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.getElementById('mainNav').classList.remove('active');
+                document.querySelector('.mobile-menu-btn').textContent = '☰';
+                document.querySelector('.mobile-menu-btn').setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Service Worker Registration (for offline capability)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('sw.js').then(function(registration) {
+                    console.log('ServiceWorker registered');
+                }).catch(function(err) {
+                    console.log('ServiceWorker registration failed');
+                });
+            });
+        }
+
+        // Reset Checklist Function
+        window.resetChecklist = function() {
+            if (confirm('Möchten Sie wirklich alle Checklisten-Fortschritte zurücksetzen?')) {
+                document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                    checkbox.checked = false;
+                    localStorage.removeItem('checklist_' + checkbox.id);
+                });
+                alert('Checklisten wurden zurückgesetzt.');
+            }
+        }
+    </script>
+</body>
+</html>

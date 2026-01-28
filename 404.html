@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seite nicht gefunden - ÜBERLEBEN</title>
+    <style>
+        :root {
+            --bg-primary: #0f0f0f;
+            --text-primary: #e0e0e0;
+            --accent-orange: #ff6b35;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Segoe UI', 'Helvetica', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            color: var(--accent-orange);
+            line-height: 1;
+            text-shadow: 4px 4px 0 rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin: 1rem 0;
+            color: var(--text-primary);
+        }
+        
+        p {
+            color: #888;
+            margin-bottom: 2rem;
+            max-width: 400px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--accent-orange);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #ff8c5a;
+            transform: translateY(-2px);
+        }
+        
+        .survival-tip {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: rgba(255,107,53,0.1);
+            border-left: 4px solid var(--accent-orange);
+            border-radius: 0 4px 4px 0;
+            max-width: 500px;
+            text-align: left;
+        }
+        
+        .survival-tip strong {
+            color: var(--accent-orange);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-code">404</div>
+    <h1>Seite nicht gefunden</h1>
+    <p>Diese Seite existiert nicht oder wurde verschoben. In der Krise gilt: Wenn der Weg versperrt ist, finde einen anderen.</p>
+    <a href="/" class="btn">→ Zurück zur Startseite</a>
+    
+    <div class="survival-tip">
+        <strong>Survival-Tipp:</strong> Wenn du dich verlaufen hast, suche nach Orientierungspunkten. Fließendes Wasser führt bergab zu Siedlungen. Folge ihm.
+    </div>
+</body>
+</html>
